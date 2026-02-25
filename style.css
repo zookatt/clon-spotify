@@ -1,0 +1,128 @@
+:root {
+  /* COLORS*/
+
+  /* Brand */
+  --color-brand: #1db954; /* Verde Spotify */
+  --color-brand-hover: #1ed760; /* Verde hover */
+
+  /* Background */
+  --color-bg-dark: #191414; /* Negro Spotify */
+  --color-bg-secondary: #282828; /* Gris oscuro tarjetas */
+
+  /* Text */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b3b3b3;
+  --color-text-muted: #6a6a6a;
+
+  /* Border*/
+  --color-border: #333333;
+
+  /* FONTS */
+  --font-base: "Montserrat", "DM Sans", Helvetica, Arial, sans-serif;
+
+  --font-size-xs: 0.75rem; /*  12px */
+  --font-size-sm: 0.875rem; /*  14px */
+  --font-size-base: 1rem; /*  16px */
+  --font-size-md: 1.125rem; /*  18px */
+  --font-size-lg: 1.5rem; /*  24px */
+  --font-size-xl: 2rem; /*  32px */
+  --font-size-2xl: 3rem; /*  48px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* SPACING */
+  --spacing-xs: 0.25rem; /*  4px */
+  --spacing-sm: 0.5rem; /*  8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 2rem; /* 32px */
+  --spacing-xl: 4rem; /* 64px */
+  --spacing-2xl: 6rem; /* 96px */
+
+  /* RADIUS */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-full: 500px; /* Para botones en píldora */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-base);
+}
+
+body {
+  background-color: var(--color-text-primary);
+  color: var(--color-bg-dark);
+}
+
+.container {
+  width: 375px;
+  margin: auto;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: var(--spacing-sm);
+}
+
+/* 
+Para meu desplegable
+header nav ul {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  color: var(--color-bg-dark);
+  text-decoration: none;
+} */
+
+#spotify-logo {
+  width: 25%;
+  height: auto;
+}
+#hamburquer-icon {
+  width: 10%;
+  height: auto;
+}
+
+.banner {
+  margin: 0;
+  position: relative;
+  background: url("./assets/landing.jpg") no-repeat center/cover;
+  color: var(--color-text-primary);
+  text-align: center;
+  min-height: 80%; /* centre inline text */
+  padding: 6rem 1rem; /* give the section some height */
+  display: flex; /* use flex to centre both axes */
+  flex-direction: column;
+  justify-content: center; /* vertical */
+  align-items: center;
+  gap: var(--spacing-md);
+}
+.banner p {
+  font-size: var(--font-size-sm);
+}
+section {
+  margin: var(--font-size-sm);
+}
+img {
+  width: 50%;
+  height: auto;
+}
+#speakers-icon,
+#devices-icon,
+#quality-icon {
+  width: 25%;
+  height: auto;
+}
+#spotify-icon-mobile {
+  width: 100%;
+  height: auto;
+}
