@@ -74,8 +74,9 @@ body {
   background-color: var(--color-text-primary);
   display: grid;
   grid-template-columns: 1fr;
-  width: 375px;
-  margin: auto;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: var(--spacing-sm);
 }
 header {
   display: flex;
@@ -102,11 +103,11 @@ nav {
   background: url("./assets/landing.jpg") no-repeat center/cover;
   color: var(--color-text-primary);
   text-align: center;
-  min-height: 20%; /* centre inline text */
-  padding: 6rem 1rem; /* give the section some height */
-  display: flex; /* use flex to centre both axes */
+  min-height: 20%;
+  padding: 6rem 1rem;
+  display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical */
+  justify-content: center;
   align-items: center;
   gap: var(--spacing-md);
 }
@@ -114,9 +115,12 @@ nav {
   font-size: var(--font-size-sm);
 }
 section {
-  margin: var(--font-size-sm);
+  margin: var(--spacing-sm);
 }
-
+h1 {
+  font-size: var(--font-size-xl);
+  padding: 0 var(--spacing-sm);
+}
 /* FEATURES SECTION*/
 .features-container {
   display: flex;
@@ -127,18 +131,14 @@ section {
 
 .features-container li {
   display: flex;
-  flex-direction: column; /* o row si quieres icono + texto en fila */
-  align-items: center; /* centra horizontalmente */
-  justify-content: center; /* centra verticalmente si el li tiene altura */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: var(--spacing-sm);
-  text-align: center; /* centra texto */
+  text-align: center;
 }
 .features-container li h3 {
   color: var(--color-brand);
-  font-weight: var(--font-weight-bold);
-}
-.features-container li h3:hover {
-  color: var(--color-brand-hover);
   font-weight: var(--font-weight-bold);
 }
 
@@ -172,15 +172,15 @@ section {
   align-items: center;
   background-color: var(--color-brand);
   color: var(--color-text-primary);
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
 }
 
-.app-overview-header {
+#app-overview-header {
   text-align: center;
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-md);
-  margin: var(--font-size-md);
-  padding: var(--spacing-sm) 0;
+  margin: var(--spacing-md) 0;
+
   text-decoration: underline;
   text-decoration-color: var(--color-text-primary);
   text-decoration-thickness: 2px;
@@ -190,13 +190,20 @@ section {
   display: flex;
   flex-direction: column;
   margin: 0 var(--spacing-md);
-  gap: var(--spacing-md);
+  gap: var(--spacing-lg);
+
   list-style: none;
 }
 .app-content-list li {
   display: flex;
   flex-direction: column;
   align-items: start;
+  gap: var(--spacing-md);
+  margin: 0 var(--spacing-md);
+  padding: 0 var(--spacing-sm);
+}
+.app-content-list p {
+  font-weight: 100;
 }
 #spotify-icon-white {
   width: 35%;
@@ -207,20 +214,18 @@ section {
 }
 #spotify-icon-mobile {
   width: 100%;
-  height: auto;
 }
 .app-overview-desktop {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 var(--spacing-md);
-  gap: var(--spacing-md);
+  gap: var(--spacing-lg);
 }
 
 /*DESKTOP*/
 @media (min-width: 1400px) {
   .container {
-    width: 1440px;
+    width: 1200px;
     max-width: 90%;
   }
   header {
@@ -232,6 +237,13 @@ section {
   }
   #hamburquer-icon {
     display: none;
+  }
+  h1 {
+    font-size: var(--font-size-2xl);
+  }
+  .features-container li h3:hover {
+    color: var(--color-brand-hover);
+    cursor: pointer;
   }
   nav {
     display: block;
@@ -247,31 +259,57 @@ section {
     color: var(--color-bg-dark);
     text-decoration: none;
   }
-  h1 {
-    font-size: var(--font-size-2xl);
-  }
+
   /* FEATURES SECTION*/
+
   .features-container {
     flex-direction: row;
+    justify-content: space-evenly;
   }
 
   #features-header {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-xl);
+  }
+  .app-overview {
+    padding: 0 var(--spacing-xl);
+    margin: var(--spacing-md);
   }
   .app-overview-desktop {
     display: flex;
     flex-direction: row;
   }
-
-  #spotify-icon-white {
-    width: 15%;
-    height: 15%;
+  .app-content-list {
+    align-self: flex-start;
   }
+
+  #app-overview-header {
+    font-size: var(--font-size-xl);
+    align-self: flex-start;
+    margin: var(--spacing-md);
+    padding: var(--spacing-lg) 0;
+  }
+
   #spotify-icon-mobile {
     display: none;
   }
   #spotify-app {
-    width: 25%;
     display: block;
+  }
+  .app-overview-desktop {
+    justify-content: center;
+    gap: var(--spacing-2xl);
+    padding: 0 0 var(--spacing-xl) 0;
+  }
+
+  #spotify-icon-white {
+    width: 10%;
+  }
+  #spotify-app {
+    width: 35%;
+  }
+  .app-content-list li {
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size-lg);
   }
 }
