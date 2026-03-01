@@ -82,7 +82,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm) ;
   width: 100%;
 }
 nav {
@@ -92,7 +92,7 @@ nav {
   width: 29%;
   height: auto;
 }
-#hamburquer-icon {
+#hamburguer-icon {
   width: 9%;
   height: auto;
 }
@@ -229,13 +229,13 @@ h1 {
     max-width: 90%;
   }
   header {
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding:  var(--spacing-md);
   }
   #spotify-logo {
     width: 10%;
     height: auto;
   }
-  #hamburquer-icon {
+  #hamburguer-icon {
     display: none;
   }
   h1 {
